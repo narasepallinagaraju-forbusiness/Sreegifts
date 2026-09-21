@@ -1,0 +1,177 @@
+.new-models-section {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 5vw 90px;
+}
+
+.new-models-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.new-models-heading h2 {
+  margin: 12px 0 0;
+  font:
+    600 clamp(28px, 4.5vw, 62px)/1.02 "Poppins",
+    sans-serif;
+  letter-spacing: -0.06em;
+}
+
+.new-models-heading h2 em {
+  color: var(--teal);
+  font-style: normal;
+}
+
+.new-models-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--teal);
+  display: grid;
+  place-items: center;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+
+.carousel-button:hover {
+  transform: translateY(-2px);
+  background: #e7eee8;
+}
+
+.carousel-button-active {
+  background: var(--teal);
+  color: white;
+  border-color: var(--teal);
+}
+
+.new-models-stage {
+  background: var(--teal-deep);
+  color: #f7f2e9;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 26px;
+  overflow: hidden;
+}
+
+.new-models-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px 0 12px;
+}
+
+.new-models-intro .eyebrow {
+  color: #f3c991;
+}
+
+.new-models-intro p {
+  color: #c4d5ce;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: auto 0 20px;
+}
+
+.new-models-intro .text-link {
+  color: #f3c991;
+}
+
+.new-models-track {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #b5cbbd66 transparent;
+  padding-bottom: 12px;
+}
+
+.new-model-card {
+  flex: 0 0 285px;
+  background: var(--white);
+  color: var(--ink);
+  scroll-snap-align: start;
+  transition: transform 0.25s;
+}
+
+.new-model-card:hover {
+  transform: translateY(-5px);
+}
+
+.new-model-card .product-visual {
+  min-height: 270px;
+}
+
+.new-model-card-copy {
+  padding: 16px 17px 18px;
+}
+
+.new-model-category {
+  color: var(--saffron);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.new-model-card h3 {
+  margin: 8px 0 13px;
+  font:
+    600 19px/1.25 "Poppins",
+    sans-serif;
+}
+
+.new-model-link {
+  color: var(--teal);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .new-models-section {
+    padding: 0 16px 62px;
+  }
+
+  .new-models-heading {
+    align-items: start;
+  }
+
+  .new-models-controls {
+    padding-top: 20px;
+  }
+
+  .new-models-stage {
+    display: block;
+    padding: 18px;
+  }
+
+  .new-models-intro {
+    padding: 5px 0 24px;
+  }
+
+  .new-models-intro p {
+    margin: 14px 0 18px;
+  }
+
+  .new-model-card {
+    flex-basis: min(76vw, 285px);
+  }
+
+  .new-models-heading h2 {
+    font-size: clamp(22px, 7vw, 36px);
+  }
+}

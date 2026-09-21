@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { getCategory, products } from "@/data/mock-catalog";
+import { ProductCard, ProductVisual } from "@/components/site-shell";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const category = getCategory(slug); return { title: category?.name ?? "Category" }; }
+export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const category = getCategory(slug); if (!category) notFound(); const categoryProducts = products.filter((product) => product.categoryId === category.id); return <main><section className="hero category-hero"><div><span className="eyebrow">Collection / {category.eyebrow}</span><h1>{category.name} <em>with meaning.</em></h1><div className="hero-actions"><a href="#pieces" className="button button-dark">Browse this collection <span className="button-icon">↘</span></a></div></div><div className="hero-art"><ProductVisual tone={category.accent} large alt={category.image.alt} /></div></section><section id="pieces" className="featured-section"><div className="section-intro"><div><span className="eyebrow">{categoryProducts.length} pieces</span><h2>Made for this corner of your story.</h2></div></div><div className="product-grid">{categoryProducts.map((product) => <ProductCard key={product.id} product={product} />)}</div></section></main>; }

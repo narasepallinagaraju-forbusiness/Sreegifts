@@ -1,0 +1,30 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="base" x1="120" y1="70" x2="1080" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E4D8C8"/>
+      <stop offset="0.48" stop-color="#BCCFC5"/>
+      <stop offset="1" stop-color="#C28F72"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(770 280) rotate(130) scale(500 480)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5E9C8" stop-opacity=".94"/>
+      <stop offset="1" stop-color="#F5E9C8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="80" y="60" width="1040" height="800" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#344843" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" rx="24" fill="#F3EEE7"/>
+  <circle cx="945" cy="130" r="250" fill="#B9CDBF" fill-opacity=".45"/>
+  <circle cx="140" cy="790" r="270" fill="#D5A16C" fill-opacity=".25"/>
+  <path d="M96 726C300 602 382 772 570 620C758 468 846 590 1100 434" stroke="#F8F1E6" stroke-width="42" stroke-linecap="round" stroke-opacity=".62"/>
+  <g filter="url(#shadow)">
+    <rect x="218" y="164" width="764" height="570" rx="28" fill="url(#base)"/>
+    <rect x="218" y="164" width="764" height="570" rx="28" fill="url(#glow)"/>
+    <circle cx="422" cy="365" r="86" fill="#D98676" fill-opacity=".72"/>
+    <circle cx="475" cy="320" r="58" fill="#F1C881" fill-opacity=".62"/>
+    <circle cx="797" cy="525" r="116" fill="#6C8C84" fill-opacity=".65"/>
+    <path d="M285 580C435 422 590 708 884 344" stroke="#F6EEDC" stroke-width="22" stroke-linecap="round" stroke-opacity=".7"/>
+    <path d="M330 620C505 476 622 700 884 416" stroke="#264F4D" stroke-width="7" stroke-linecap="round" stroke-opacity=".55"/>
+  </g>
+  <text x="600" y="805" fill="#314541" font-family="Georgia, serif" font-size="30" text-anchor="middle" letter-spacing="5">RESIN ART PLACEHOLDER</text>
+</svg>
